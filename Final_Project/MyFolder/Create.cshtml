@@ -1,0 +1,94 @@
+﻿
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<form action="/Draftspecification/Create" method="post">
+    <div>
+        <table>
+            <tr>
+                <td colspan="2" style="width: 174px; height: 40px">
+                    <b>Project Specification:</b>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 101px; height: 44px">
+                    Title:
+                </td>
+                <td style="width: 204px; height: 44px">
+                    <input id="Title" type="text" name="Title">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 101px; height: 44px">
+                    Customer Name:
+                </td>
+                <td style="width: 204px; height: 44px">
+                    <input id="CourseName" type="text" name="CourseName">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 101px; height: 41px">
+                    Topic:
+                </td>
+                <td style="width: 204px; height: 41px">
+                    <input id="Topic" type="text" name="Topic">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 101px; height: 41px">
+                    Date:
+                </td>
+                <td style="width: 204px; height: 41px">
+                    <input id="Date" type="date" name="Date">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 101px; height: 41px">
+                    Requirements List:
+                </td>
+                <td style="width: 204px; height: 41px">
+                    <ul id="Requirementlist">
+                        <li id="rowNum1">Requirement 1:<input id="Requirementlist1" type="text" name="Requirementlist1" /><input id="Add_Rqm" type="button" value="Add requirement" /></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 101px; height: 41px">
+                    Note:
+                </td>
+                <td style="width: 204px; height: 41px">
+                    <textarea id="Note" rows="4" cols="50" name="Note"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="width: 101px; height: 41px">
+                    <input id="txtCreate" type="submit" value="Create">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p>If you click on me, I will disappear.</p>
+</form>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var rowNum = 1;
+        $("#Add_Rqm").click(function () {
+            rowNum++;
+            var row = '<li id="rowNum' + rowNum + '">Requirement' + rowNum + ': <input id=id="Requirementlist' + rowNum + '" type="text" name="Requirementlist' + rowNum + '" /> <input id="' + rowNum + '" class="Remove_Rqm" type="button" value="Remove" /></li>';
+            $('#Requirementlist').append(row);
+
+        })
+        //Remove_Rqm'+rowNum+'
+
+        $("#Requirementlist").on('click', '.Remove_Rqm', null, function () {
+            var num = $(event.target).attr('id');
+            $("#rowNum" + num).remove();
+            rowNum--;
+
+        })
+    });
+</script>

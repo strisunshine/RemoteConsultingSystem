@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Projectdownload";
+    //var filelist = (string[])ViewBag.Filenames;
+    //for (int i = 0; i < filelist.Length; i++)
+    //{
+    //    Response.Write(filelist[i] + '\n');
+    //}
+}
+
+<h2>Projectdownload</h2>
+<ul id="Filelist">
+    @{
+        int i = 0;
+    }
+    @foreach (string file in ViewBag.Filenames)
+    {
+        byte[] filebyte = System.Text.Encoding.UTF8.GetBytes(@file);
+        if (BitConverter.IsLittleEndian) { Array.Reverse(filebyte); }
+        int fileid = BitConverter.ToInt32(filebyte, 0);
+         <li id="FileNum-@i">File @i: @file@Html.ActionLink("Download", "Singlefiledownload", new { id = fileid })</li>
+    }
+
+</ul>
+
+  

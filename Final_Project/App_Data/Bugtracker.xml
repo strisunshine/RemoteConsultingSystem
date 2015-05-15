@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bugnotes>
+  <bugnote>
+    <projectName>Sample Project</projectName>
+    <name>SAP implementation</name>
+    <client>Clickdriven Co.</client>
+    <description>The implementation needs better hardware support.</description>
+    <resolution>April 28th</resolution>
+    <status>not started</status>
+  </bugnote>
+  <bugnote>
+    <projectName>Room Project</projectName>
+    <name>jjj</name>
+    <client>jjj</client>
+    <description>jjj</description>
+    <resolution>jjj</resolution>
+    <status>pending</status>
+  </bugnote>
+  <bugnote>
+    <projectName>Sample Project</projectName>
+    <name>sssss</name>
+    <client>ssss</client>
+    <description>ssss</description>
+    <resolution>sss</resolution>
+    <status>complete</status>
+  </bugnote>
+  <bugnote>
+    <projectName>Room Project</projectName>
+    <name>fghgh</name>
+    <client>jgj</client>
+    <description>kjk</description>
+    <resolution>j</resolution>
+    <status>not started</status>
+  </bugnote>
+</bugnotes>

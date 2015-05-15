@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<projects>
+  <project>
+    <ProjectName>Sample Project</ProjectName>
+  </project>
+  <project>
+    <ProjectName>B Project</ProjectName>
+  </project>
+  <project>
+    <ProjectName>Room Project</ProjectName>
+  </project>
+  <project>
+    <ProjectName>House Project</ProjectName>
+  </project>
+</projects>

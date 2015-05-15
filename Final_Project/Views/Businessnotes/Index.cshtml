@@ -1,0 +1,55 @@
+﻿
+@model IEnumerable<Final_Project.Models.Businessnote>
+
+@{
+    ViewBag.Title = "Business Notes";
+}
+
+<h2>Business Notes</h2>
+
+<p>
+    <table class="table indent">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.noteid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.notetime)
+            </th>
+            <th>Views</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.noteid)
+                </td>
+                <td>-</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.title)
+                </td>
+                <td>
+                    @Html.Encode(item.content).Replace("[\n\r]+", "<br />"))
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.notetime)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </table>
+</p>
+<div class="indent">
+    @Html.ActionLink("Create New", "Create")
+</div>

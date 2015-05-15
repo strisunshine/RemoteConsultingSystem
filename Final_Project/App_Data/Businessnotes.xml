@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<businessnotes>
+  <businessnote>
+    <noteid>111</noteid>
+    <title>sdf</title>
+    <content>sdf</content>
+    <notetime>sdf</notetime>
+  </businessnote>
+  <businessnote>
+    <noteid>111</noteid>
+    <title>dfg</title>
+    <content>11</content>
+    <notetime>sdf</notetime>
+  </businessnote>
+  <businessnote>
+    <noteid>999</noteid>
+    <title>demo</title>
+    <content>this is content for demo  demo  demo  demo  demo  demo  demo </content>
+    <notetime>sdf</notetime>
+  </businessnote>
+  <businessnote>
+    <noteid>1111</noteid>
+    <title>GGGG</title>
+    <content>g</content>
+    <notetime>g</notetime>
+  </businessnote>
+  <businessnote>
+    <noteid>123</noteid>
+    <title>sdf</title>
+    <content>sdf</content>
+    <notetime>sdf</notetime>
+  </businessnote>
+  <businessnote>
+    <noteid>111</noteid>
+    <title>sdfs</title>
+    <content>ffds
+sdfsd</content>
+    <notetime></notetime>
+  </businessnote>
+  <businessnote>
+    <noteid>11</noteid>
+    <title>adf</title>
+    <content>a line
+a new line
+another line</content>
+    <notetime>af</notetime>
+  </businessnote>
+  <businessnote>
+    <noteid>11</noteid>
+    <title>sf</title>
+    <content>a line
+a new line
+another lien</content>
+    <notetime>af</notetime>
+  </businessnote>
+  <businessnote>
+    <noteid>11</noteid>
+    <title>adf</title>
+    <content>a new line
+
+a new line</content>
+    <notetime></notetime>
+  </businessnote>
+  <businessnote>
+    <noteid>3</noteid>
+    <title>we</title>
+    <content>a line
+a new line
+another line</content>
+    <notetime>af</notetime>
+  </businessnote>
+  <businessnote>
+    <noteid>11</noteid>
+    <title>a</title>
+    <content>a line
+a new line
+another line</content>
+    <notetime>aa</notetime>
+  </businessnote>
+</businessnotes>

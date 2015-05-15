@@ -1,0 +1,113 @@
+﻿@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+<script src='../../Scripts/jquery-ui-1.10.4.custom.js'></script>
+
+@model Final_Project.Models.Draftspecification
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Draftspecification</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustomerName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerName)
+                @Html.ValidationMessageFor(model => model.CustomerName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Topic, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Topic)
+                @Html.ValidationMessageFor(model => model.Topic)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date)
+                @Html.ValidationMessageFor(model => model.Date)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <ul id="Requirementlist">
+                <li id="rowNum1">Requirement:<textarea id="Requirementlist1" name="Requirementlist1"></textarea><input id="Add_Rqm" type="button" value="Add requirement" /></li>
+            </ul>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Note, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Note)
+                @Html.ValidationMessageFor(model => model.Note)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Project, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ProjectId", "Select ProjectName")
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var rowNum = 1;
+        $("#Add_Rqm").click(function () {
+            rowNum++;
+            var row = '<li id="rowNum' + rowNum + '">Requirement: <textarea id=id="Requirementlist' + rowNum + '" name="Requirementlist' + rowNum + '"></textarea> <input id="' + rowNum + '" class="Remove_Rqm" type="button" value="Remove" /></li>';
+            $('#Requirementlist').append(row);
+
+        })
+        //Remove_Rqm'+rowNum+'
+
+        $("#Requirementlist").on('click', '.Remove_Rqm', null, function () {
+            var num = $(event.target).attr('id');
+            $("#rowNum" + num).remove();
+            rowNum--;
+
+        })
+        $("#Requirementlist1").defaultValue = "Default requirement";
+    });
+</script>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

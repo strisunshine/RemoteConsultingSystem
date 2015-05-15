@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Wenting Consulting</h1>
+    <p class="lead">Wenting Consulting team offers a broad range of consulting, international trade, culture and education exchange services designed to help our clients maximize their business achievements. The underlying philosophy of Wenting Consulting is to leverage our own skills and connections to support all our clients. These will enable companies to rapidly develop and provide them a chance to expand their business scope.Wenting ensures that the whole business cooperation process is fully supervised and controlled, making the cooperation easier for all the parties.</p>
+    <p><a href="http://localhost:61626/Home/About" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Projects</h2>
+        <p>
+            Each year over 50 consulting projects are undertaken involving over 150 consultants worldwide. In previous years we have consulted for a variety of clients across five continents. For example, we have worked with: Microsoft, Facebook, Amazon.
+        </p>
+        <p class ="btn btn-default">@Html.ActionLink("Learn More", "Index", "Project")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Meetings</h2>
+        <p>Due to our desire to provide our existing clients with the highest level of service possible, we want to meet clients in person to get to know their requirements. Feel free to request a meeting on the website. We will schedule the meeting as soon as possible.</p>
+        <p class="btn btn-default">@Html.ActionLink("Learn More", "Index", "Meetingschedule")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Contact</h2>
+        <p>You can easily find the contact information on our website. Please feel free to ask for any information, provide suggestions and post any your concern.</p>
+        <p class="btn btn-default">@Html.ActionLink("Learn More", "Index", "Contact")</p>
+    </div>
+</div>
+
+@*<div id="xxx"></div>
+<script>
+    $(document).ready(function () {
+
+        $('#xxx').text("inside the script");
+    })
+</script>*@

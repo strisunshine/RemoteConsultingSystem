@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Projectupload";
+}
+@*<form method="post" action="/Project/Singlefileupload" runat="server" >
+    <input type="file" value="Selectfile" id="MyFileUpload" />
+    <input type="submit" value="Upload" />
+</form>*@
+@using (Html.BeginForm("Singlefileupload", "Project", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="file" />
+    <input type="submit" value="OK" />
+}
+<script>
+    var da = document.getElementsByTagName('#Thispage input')[0].id;
+    $("#yyy").text(da);
+</script>
+@*<h2>@Html.ActionLink("Project upload", "Singlefileupload", "Project", new{ id = da } )</h2>*@
+<h2>You have successfully uploaded "foobar.txt".</h2>
+<div id="yyy"></div>
